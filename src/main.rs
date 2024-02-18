@@ -1,26 +1,37 @@
-// use crossterm::{
-//     event::{self, KeyCode, KeyEventKind},
-//     terminal::{
-//         self, disable_raw_mode, enable_raw_mode, EnterAlternateScreen, LeaveAlternateScreen
-//     },
-//     ExecutableCommand
-// };
+use crossterm::{
+    event::{self, KeyCode, KeyEventKind}, execute, terminal::{
+        self, disable_raw_mode, enable_raw_mode, EnterAlternateScreen, LeaveAlternateScreen
+    }
+};
 
+use anyhow::Result;
 use std::fmt::format;
 
-use crossterm::event::KeyCode;
 use ratatui::{
     prelude::{CrosstermBackend, Stylize, Terminal},
     widgets::Paragraph,
 };
 
 
+struct App {
+    counter: i64,
+    should_quit: bool,
+}
 
+fn startup() -> Result<()> {
+    enable_raw_mode()?;
+    execute!(std::io::stderr(), EnterAlternateScreen)?;
+    Ok(())
+}
 
-fn main() -> Result<(), Box<dyn std::error::Error>>{
-    // stdout().execute(EnterAlternateScreen)?;
-    crossterm::terminal::enable_raw_mode()?;
-    crossterm::execute!(std::io::stderr(), crossterm::terminal::EnterAlternateScreen)?;
+fn shutdown() -> Result<()> {
+    execute!(std::io::stderr(), LeaveAlternateScreen)?;
+    disable_raw_mode()?;
+    Ok(())
+}
+
+fn main() -> Result<()>{
+    startup()?;
 
     let mut terminal = Terminal::new(CrosstermBackend::new(std::io::stderr()))?;
     let mut counter = 0;
@@ -44,8 +55,6 @@ fn main() -> Result<(), Box<dyn std::error::Error>>{
         }
     }
 
-    crossterm::execute!(std::io::stderr(), crossterm::terminal::LeaveAlternateScreen)?;
-    crossterm::terminal::disable_raw_mode()?;
-
+    shutdown()?;
     Ok(())
 }
