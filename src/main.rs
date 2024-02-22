@@ -1,4 +1,4 @@
-use std::io::{self, stdout};
+use std::io::{self, stdout, Error};
 // mod event;
 // use crate::event::*;
 use crossterm::{
@@ -17,9 +17,10 @@ use crossterm::{
     }
 };
 use ratatui::{backend::CrosstermBackend, Terminal};
+mod chatbuild;
+use crate::chatbuild::*;
 mod ui;
 use crate::ui::ui;
-
 
 fn main() -> Result<(), io::Error> {
 
@@ -28,6 +29,7 @@ fn main() -> Result<(), io::Error> {
     execute!(stderr, EnterAlternateScreen)?;
     let mut terminal = Terminal::new(CrosstermBackend::new(stdout()))?;
     terminal.clear()?;
+    let chat = chat_interface("Descripe in five words the Rust programming language.");
     loop {
         terminal.draw(|frame| ui(frame))?;
         if let Event::Key(key) = event::read()? {
