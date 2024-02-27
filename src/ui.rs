@@ -1,11 +1,11 @@
 use ratatui::{
     prelude::*,
     widgets::{
-        Block, BorderType, Borders, Paragraph
+        Block, BorderType, Borders, Paragraph, Wrap
     }
 };
 
-use crate::{app::App};
+use crate::app::App;
 
 pub fn ui(app: &App, frame: &mut Frame) {
 
@@ -30,6 +30,7 @@ pub fn ui(app: &App, frame: &mut Frame) {
         .border_type(BorderType::Rounded);
 
     let main_output = Paragraph::new(app.text.clone().unwrap())
+        .wrap(Wrap {trim:true})
         .block(main_window);
 
     frame.render_widget(

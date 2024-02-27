@@ -16,7 +16,7 @@ pub async fn chat_interface(request: &str) -> ChatResponse {
         messages: vec![
             Message {
                 role: Role::System,
-                content: "You are dungeon master narrating the text adventure The Forgotten City Of Xeo.".to_string(),
+                content: "You are dungeon master narrating the text adventure The Forgotten City Of Xeo. You provide a robust and interesting journey with a feel of Indiana Jones, National Treasure, and especially take inspiration from the style of James Rollins sigma force novels with a writing style like Stephen King".to_string(),
             },
             Message {
                 role: Role::User,
