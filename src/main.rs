@@ -1,6 +1,5 @@
-use std::io::{self, stdout, Error};
+use std::{future, io::{self, stdout, Error}, task::Poll};
 // mod event;
-// use crate::event::*;
 use crossterm::{
     execute,
     event::{
@@ -20,31 +19,47 @@ use ratatui::{backend::CrosstermBackend, Terminal};
 mod chatbuild;
 use crate::chatbuild::*;
 mod ui;
+mod tui;
+mod app;
+use crate::app::*;
 use crate::ui::ui;
+use crate::tui::*;
 
-fn main() -> Result<(), io::Error> {
+#[tokio::main]
+async fn main() -> Result<()> {
 
-    enable_raw_mode()?;
-    let mut stderr = io::stderr();
-    execute!(stderr, EnterAlternateScreen)?;
-    let mut terminal = Terminal::new(CrosstermBackend::new(stdout()))?;
-    terminal.clear()?;
-    let chat = chat_interface("Descripe in five words the Rust programming language.");
+    let chat = chat_interface("Greet the adventure and welcome him to the 
+    upcoming journey").await;
+    // println!("{:?}", chat);
+
+    let result = run().await;
+
+    Ok(())
+}
+
+async fn run() -> Result<()> {
+    let mut tui = tui::Tui::new()?
+        .tick_rate(4.0)
+        .frame_rate(30.0);
+    tui.enter()?;
+
+    let mut app = App { should_quit: false, text: Some(String::new()), current_screen: None, load_screen: format!("intro").into()};
+
     loop {
-        terminal.draw(|frame| ui(frame))?;
-        if let Event::Key(key) = event::read()? {
-            if key.kind == event::KeyEventKind::Release {
-                continue;
-            }
-            match key.code {
-                KeyCode::Char('e') => break,
-                KeyCode::Char('q') => break,
-                _=>{}
-            }
+        tui.draw(|frame| ui(&app, frame))?;
+        // print!("{:?}", app.text);
+
+        if let Some(event) = tui.next().await {
+            update(&mut app, event).await?;
+        };
+                
+        if app.should_quit {
+            break;
         }
+
     }
 
-    execute!(stderr, LeaveAlternateScreen)?;
-    disable_raw_mode()?;
+
+    tui.exit()?;
     Ok(())
 }

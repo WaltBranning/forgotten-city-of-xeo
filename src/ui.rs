@@ -1,37 +1,43 @@
 use ratatui::{
     prelude::*,
     widgets::{
-        Block,
-        Borders,
-        BorderType,
+        Block, BorderType, Borders, Paragraph
     }
 };
 
-pub fn ui(frame: &mut Frame) {
+use crate::{app::App};
+
+pub fn ui(app: &App, frame: &mut Frame) {
 
     let main_window_split = Layout::default()
         .direction(Direction::Vertical)
         .constraints([Constraint::Percentage(100), Constraint::Percentage(15)])
         .split(frame.size());
 
+    let main_window = Block::new()
+        .title(" The Forgotten City Of Xeo ")
+        .title_alignment(Alignment::Center)
+        .borders(Borders::ALL)
+        .style(Style::default().fg(Color::Yellow))
+        .border_type(BorderType::Rounded);
+
+    let control_window = Block::new()
+        .title(" Controls ")
+        .title_alignment(Alignment::Center)
+        .borders(Borders::ALL)
+        .style(Style::default().fg(Color::Yellow))
+        // .style(Style::default().bg(Color::Rgb(255, 162, 0)))
+        .border_type(BorderType::Rounded);
+
+    let main_output = Paragraph::new(app.text.clone().unwrap())
+        .block(main_window);
 
     frame.render_widget(
-        Block::new()
-            .title(" The Forgotten City Of Xeo ")
-            .title_alignment(Alignment::Center)
-            .borders(Borders::ALL)
-            .style(Style::default().fg(Color::Yellow))
-            .border_type(BorderType::Rounded),
+        main_output,
         main_window_split[0]);
 
     frame.render_widget(
-            Block::new()
-                .title(" Controls ")
-                .title_alignment(Alignment::Center)
-                .borders(Borders::ALL)
-                .style(Style::default().fg(Color::Yellow))
-                // .style(Style::default().bg(Color::Rgb(255, 162, 0)))
-                .border_type(BorderType::Rounded),
+            control_window,
             main_window_split[1]);
     
     // render_window(frame, header[0], "Game header");

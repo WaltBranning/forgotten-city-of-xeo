@@ -1,14 +1,32 @@
-use chat_gpt_lib_rs::{ChatGPTClient, ChatInput, Message, Model, Role};
-use std::io
+use chat_gpt_lib_rs::{ChatGPTClient, ChatInput, Message, Model, Role, ChatResponse};
+use std::io::Error;
 // use tokio;
 // use color_eyre::eyre::Ok;
 
 
-const API_KEY: &str = "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";
+const API_KEY: &str = "";
 const BASE_URL: &str = "https://api.openai.com";
-const CHAT_CLIENT = chatGPTClient::new(API_KEY, BASE_URL);
 
-pub fn chat_interface(request: &str) -> Result<(),io::Error> {
 
-    Ok(())
+pub async fn chat_interface(request: &str) -> ChatResponse {
+    let client:ChatGPTClient = ChatGPTClient::new(API_KEY, BASE_URL);
+
+    let chat_input = ChatInput {
+        model: Model::Gpt3_5Turbo,
+        messages: vec![
+            Message {
+                role: Role::System,
+                content: "You are dungeon master narrating the text adventure The Forgotten City Of Xeo.".to_string(),
+            },
+            Message {
+                role: Role::User,
+                content: request.to_string(),
+            }
+        ],
+        ..Default::default()
+    };
+    let response = client.chat(chat_input).await.unwrap();
+    
+    // println!("{:?}", response.choices[0].message.content);
+    response
 }
