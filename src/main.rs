@@ -41,25 +41,25 @@ async fn run() -> Result<()> {
     let mut tui = tui::Tui::new()?
         .tick_rate(4.0)
         .frame_rate(30.0);
-    tui.enter()?;
+    // tui.enter()?;
 
-    let mut app = App { should_quit: false, text: Some(String::new()), current_screen: None, load_screen: format!("intro").into()};
+    // let mut app = App { should_quit: false, text: Some(String::new()), current_screen: None, load_screen: format!("intro").into()};
 
-    loop {
-        tui.draw(|frame| ui(&app, frame))?;
-        // print!("{:?}", app.text);
+    // loop {
+    //     tui.draw(|frame| ui(&app, frame))?;
+    //     // print!("{:?}", app.text);
 
-        if let Some(event) = tui.next().await {
-            update(&mut app, event).await?;
-        };
+    //     if let Some(event) = tui.next().await {
+    //         update(&mut app, event).await?;
+    //     };
                 
-        if app.should_quit {
-            break;
-        }
+    //     if app.should_quit {
+    //         break;
+    //     }
 
-    }
+    // }
 
 
-    tui.exit()?;
+    // tui.exit()?;
     Ok(())
 }
