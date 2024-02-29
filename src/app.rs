@@ -1,10 +1,6 @@
 use crate::tui::*;
-use crossterm::{
-    event::{
-        KeyCode::Char,
-    }
-};
-
+use crossterm::event::KeyCode::Char;
+use serde::{Deserialize, Serialize};
 use crate::chatbuild::chat_interface;
 
 pub type Err = Box<dyn std::error::Error>;
@@ -41,3 +37,10 @@ pub async fn update(app: &mut App, event: Event) -> Result<()> {
     }
     Ok(())
 }
+
+
+#[derive(Serialize, Deserialize, Debug)]
+pub struct Settings {
+    pub chat_token: String,
+}
+

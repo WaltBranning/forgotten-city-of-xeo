@@ -1,39 +1,39 @@
 {
   "locations": [
     {
-      "id": "",
+      "id": "gatehouse",
       "name": "The Gatehouse",
       "description": "",
       "prompt": ""
     },
     {
-      "id": "",
-      "name": "Cemetery Of Dread",
+      "id": "cemetery",
+      "name": "Cemetery Of Stars",
       "description": "",
       "prompt": ""
     },
     {
-      "id": "",
+      "id": "mech_lab",
       "name": "Laboratory Of Mechanical Minds",
       "description": "",
       "prompt": ""
     },
     {
-      "id": "",
+      "id": "echo_chamber",
       "name": "The Chamber of Echoes",
       "description": "A vast cavern filled with strange, glowing crystals that emit an eerie light. The slightest sound reverberates off the walls, creating a haunting symphony of echoes. Within this chamber, the past seems to linger, trapped within the very stones of Xeo.",
       "prompt": ""
     },
     {
-      "id": "",
+      "id": "gardens",
       "name": "The Verdigris Gardens",
       "description": "Nestled between the and over spilling into the Laboratory Of Mechanical Minds and The Cemetery lies a hidden garden unlike any other. Here, exotic plants with intricate foliage shimmer with hues of gold, silver, and copper verdigris. Each leaf and petal seems to be crafted from precious metals, casting a mesmerizing glow in the dim light of Xeo. The air is filled with the faint scent of ancient machine mixed with the organic, and the soft rustle of leaves whispers of secrets waiting to be uncovered.",
       "prompt": ""
     },
     {
-      "id": "",
+      "id": "tower",
       "name": "The Tower of Insight",
-      "description": "A towering spire that pierces the sky, its top lost in the clouds. Within its walls are chambers filled with mystical artifacts and arcane knowledge. Those who seek enlightenment may find answers here.",
+      "description": "A towering spire that pierces the jungle canopy, its top lost in the tree tops. Within its walls are chambers filled with mystical artifacts and arcane knowledge. Those who seek enlightenment may find answers here.",
       "prompt": ""
     },
     {
