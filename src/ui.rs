@@ -29,6 +29,11 @@ pub fn ui(app: &App, frame: &mut Frame) {
         // .style(Style::default().bg(Color::Rgb(255, 162, 0)))
         .border_type(BorderType::Rounded);
 
+    // let token_loader = "token_loader".to_string();
+    // if let token_loader = &app.current_screen {}
+
+    // let control_output = Block
+
     let main_output = Paragraph::new(app.text.clone().unwrap())
         .wrap(Wrap {trim:true})
         .block(main_window);

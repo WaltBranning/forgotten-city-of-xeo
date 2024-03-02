@@ -1,14 +1,25 @@
 {
+  "app": {
+    "chat_config": {
+      "token": ""
+    }
+  },
   "locations": [
     {
       "id": "gatehouse",
       "name": "The Gatehouse",
       "description": "",
-      "prompt": ""
+      "prompt": "Describe the Gatehouse as the adventure aproaches it. It is forboding and covered in jungle vines and carved relief from the ancient tribe that build the city.  Provide four choices games narrative choices that lead to either Cemetary Of Stars, Laboratory Of Mechanical Minds, Avenue of Guilty Gears, "
     },
     {
       "id": "cemetery",
       "name": "Cemetery Of Stars",
+      "description": "",
+      "prompt": ""
+    },
+    {
+      "id": "avenue",
+      "name": "Avenue of Guilty Gears",
       "description": "",
       "prompt": ""
     },

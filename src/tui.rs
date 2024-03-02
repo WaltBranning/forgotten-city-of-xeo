@@ -164,8 +164,10 @@ use std::{
     }
   
     pub fn enter(&mut self) -> Result<()> {
+      // println!("Entering TUI");
       crossterm::terminal::enable_raw_mode()?;
-      crossterm::execute!(std::io::stderr(), EnterAlternateScreen, cursor::Hide)?;
+      // crossterm::execute!(std::io::stderr(), EnterAlternateScreen, cursor::Hide)?;
+      // println!("Checking Here");
       if self.mouse {
         crossterm::execute!(std::io::stderr(), EnableMouseCapture)?;
       }

@@ -15,14 +15,16 @@ use crate::game::*;
 // use color_eyre::eyre::Ok;
 
 
-const API_KEY: &str = "";
+const API_KEY: &str = "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";
 const BASE_URL: &str = "https://api.openai.com";
 
 
 pub async fn chat_interface(request: &str) -> ChatResponse {
-    let client:ChatGPTClient = ChatGPTClient::new(API_KEY, BASE_URL);
-    let role_description = GameData::world_data().speaker_role;
-    // let location = GameData::location_data("gardens".to_string());
+    let token = AppData::chat_config().token;
+    let client:ChatGPTClient = ChatGPTClient::new(&token, BASE_URL);
+    let role_description = Settings::world_data().speaker_role;
+    // let location = Settings::location_data("gardens".to_string());
+    // println!("{:?}",location);
     let chat_input = ChatInput {
         model: Model::Gpt3_5Turbo,
         messages: vec![

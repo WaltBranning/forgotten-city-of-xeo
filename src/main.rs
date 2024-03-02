@@ -15,6 +15,7 @@ use crossterm::{
         LeaveAlternateScreen
     }
 };
+use game::{AppData, GameSettings};
 use ratatui::{backend::CrosstermBackend, Terminal};
 mod chatbuild;
 use crate::chatbuild::*;
@@ -38,12 +39,14 @@ async fn run() -> Result<()> {
     let mut tui = tui::Tui::new()?
         .tick_rate(4.0)
         .frame_rate(30.0);
-    tui.enter()?;
-
+    
+    // tui.enter()?;
+    // println!("Checking After Enter");
     let mut app = App { should_quit: false, text: Some(String::new()), current_screen: None, load_screen: format!("intro").into()};
-
+    // app.set_load_screen(format!("token_input"));
+    println!("{:?}", app);
     loop {
-        tui.draw(|frame| ui(&app, frame))?;
+        // tui.draw(|frame| ui(&app, frame))?;
         // print!("{:?}", app.text);
 
         if let Some(event) = tui.next().await {
@@ -52,11 +55,9 @@ async fn run() -> Result<()> {
                 
         if app.should_quit {
             break;
-        }
+        };
 
     }
-
-
-    tui.exit()?;
+    // tui.exit()?;
     Ok(())
 }
