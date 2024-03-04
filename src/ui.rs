@@ -32,7 +32,10 @@ pub fn ui(app: &App, frame: &mut Frame) {
     // let token_loader = "token_loader".to_string();
     // if let token_loader = &app.current_screen {}
 
-    // let control_output = Block
+    let control_output = || -> Block<'_> { Block::new()
+        .borders(Borders::ALL)
+        .style(Style::default().fg(Color::Yellow))
+        .border_type(BorderType::Rounded)};
 
     let main_output = Paragraph::new(app.text.clone().unwrap())
         .wrap(Wrap {trim:true})

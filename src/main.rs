@@ -40,13 +40,13 @@ async fn run() -> Result<()> {
         .tick_rate(4.0)
         .frame_rate(30.0);
     
-    // tui.enter()?;
+    tui.enter()?;
     // println!("Checking After Enter");
-    let mut app = App { should_quit: false, text: Some(String::new()), current_screen: None, load_screen: format!("intro").into()};
+    let mut app = App { should_quit: false, text: Some(String::new()), current_screen: None, load_screen: format!("introduction").into()};
     // app.set_load_screen(format!("token_input"));
     println!("{:?}", app);
     loop {
-        // tui.draw(|frame| ui(&app, frame))?;
+        tui.draw(|frame| ui(&app, frame))?;
         // print!("{:?}", app.text);
 
         if let Some(event) = tui.next().await {
@@ -58,6 +58,6 @@ async fn run() -> Result<()> {
         };
 
     }
-    // tui.exit()?;
+    tui.exit()?;
     Ok(())
 }

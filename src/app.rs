@@ -1,5 +1,7 @@
 use crate::{game::Settings, tui::*};
+use color_eyre::eyre::OptionExt;
 use crossterm::event::KeyCode::Char;
+use ratatui::symbols::bar::Set;
 use serde::{Deserialize, Serialize};
 use crate::chatbuild::chat_interface;
 
@@ -16,14 +18,24 @@ pub struct App {
 }
 
 impl App {
-    pub async fn get_location_text(&mut self) {
-        // println!("Now Getting Location Text");
-        if let Some(screen) = &self.load_screen {
-            let text_data = chat_interface("Greet the adventure and welcome him to the upcoming journey").await;
-            self.text.replace(text_data.choices[0].message.content.clone());
-            // self.text.replace("Hello traveler!".into());
-            self.load_screen.take();
-        }
+    pub async fn get_location_text(&mut self, location_name: String) -> Result<()> {
+        let mut text = String::new();
+        // let location: = Settings::location_data(self.load_screen.clone().ok_or_eyre("Unable to get location")?);
+        if let Some(location) = Settings::location_data(location_name) {
+            // println!("{:?}", location);
+            
+            let text_data = chat_interface(location.prompt.to_string()).await;
+            
+            match text_data {
+                Ok(v) => text = v.choices[0].message.content.clone(),
+                Err(e) => text = format!("Encountered Error: {}", e).to_string(),
+            }
+        };
+        
+        self.text.replace(text);
+        // self.text.replace("Hello traveler!".into());
+        self.load_screen.take();    
+        Ok(())
     }
 
     pub fn set_load_screen(&mut self, location: String) -> Result<()> {
@@ -36,8 +48,9 @@ impl App {
 
 pub async fn update(app: &mut App, event: Event) -> Result<()> {
     let load_screen = &app.load_screen;
-    app.get_location_text().await;
-
+    
+    if load_screen.is_some() {app.get_location_text(load_screen.clone().unwrap()).await?;}
+    
     if let Event::Key(key) = event {
         match key.code {
             Char('q') => app.should_quit = true,

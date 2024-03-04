@@ -48,14 +48,13 @@ pub struct Settings {
     pub app: AppData,
 }
 
-
-
 #[derive(Serialize, Deserialize, Debug)]
 pub struct WorldData {
     pub speaker_role:  String,
     pub introduction: String,
     pub description: String,
     pub history: String,
+    pub system: String,
 }
 
 #[derive(Serialize, Deserialize, Debug)]
@@ -82,6 +81,7 @@ impl Settings {
                 return Some(location)
             } 
         }
+        println!("None found");
         None
     }
 
