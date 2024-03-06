@@ -1,9 +1,10 @@
 use crate::{game::Settings, tui::*};
 use color_eyre::eyre::OptionExt;
-use crossterm::event::KeyCode::Char;
+use crossterm::{event::KeyCode::Char, style::Stylize};
 use ratatui::symbols::bar::Set;
 use serde::{Deserialize, Serialize};
 use crate::chatbuild::chat_interface;
+use std::collections::VecDeque;
 
 pub type Err = Box<dyn std::error::Error>;
 pub type Result<T> = std::result::Result<T, Err>;
@@ -12,8 +13,10 @@ pub type Result<T> = std::result::Result<T, Err>;
 pub struct App {
     pub should_quit: bool,
     pub text: Option<String>,
+    pub text_buffer: Option<VecDeque<char>>,
     pub current_screen: Option<String>,
     pub load_screen: Option<String>,
+    pub control_text: String,
     // pub settings: Settings,
 }
 
@@ -31,8 +34,16 @@ impl App {
                 Err(e) => text = format!("Encountered Error: {}", e).to_string(),
             }
         };
-        
-        self.text.replace(text);
+
+        let parts: Vec<&str> = text.split("{*json*}").collect();
+        let control_part: Vec<&str> = parts[1].split("{*end json*}").collect();
+        // let reversed_text: VecDeque<char> = parts[0].chars().rev().collect();
+        let reversed_text: VecDeque<char> = control_part[0].chars().rev().collect();
+
+        // let reversed_text: VecDeque<char> = text.chars().rev().collect();
+        // self.text.replace(reversed_test);
+        self.text_buffer.replace(reversed_text);
+        // self.text_buffer.replace(parts.collect());
         // self.text.replace("Hello traveler!".into());
         self.load_screen.take();    
         Ok(())

@@ -53,7 +53,7 @@ use std::{
   impl Tui {
     pub fn new() -> Result<Self> {
       let tick_rate = 4.0;
-      let frame_rate = 60.0;
+      let frame_rate = 80.0;
       let terminal = ratatui::Terminal::new(Backend::new(std::io::stderr()))?;
       let (event_tx, event_rx) = mpsc::unbounded_channel();
       let cancellation_token = CancellationToken::new();
