@@ -5,9 +5,11 @@ use ratatui::{
     }
 };
 
-use crate::app::App;
+use crate::{app::App, game::LocationCommand};
 
 pub fn ui(app: &App, frame: &mut Frame) {
+
+    let mut command_list: Vec<Block> = Vec::new();
 
     let main_window_split = Layout::default()
         .direction(Direction::Vertical)
@@ -37,6 +39,12 @@ pub fn ui(app: &App, frame: &mut Frame) {
         .style(Style::default().fg(Color::Yellow))
         .border_type(BorderType::Rounded)};
 
+    if let Some(commands) = app.commands.as_ref() {
+        for command in commands {
+            
+        }
+    }
+    
     let main_output = Paragraph::new(app.text.clone().unwrap())
         .wrap(Wrap {trim:true})
         .block(main_window);

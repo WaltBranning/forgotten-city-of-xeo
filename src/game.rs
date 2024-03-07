@@ -58,11 +58,20 @@ pub struct WorldData {
 }
 
 #[derive(Serialize, Deserialize, Debug)]
+pub struct LocationCommand {
+    pub command_type: String,
+    pub label: String,
+    pub location: String,
+    pub prompt: String,
+}
+
+#[derive(Serialize, Deserialize, Debug)]
 pub struct Location {
     pub id: String,
     pub name: String,
     pub description: String,
     pub prompt: String,
+    pub commands: Vec<LocationCommand>,
 }
 
 impl Settings {

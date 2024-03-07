@@ -47,9 +47,9 @@ async fn run() -> Result<()> {
     
     tui.enter()?;
     // println!("Checking After Enter");
-    let mut app = App { should_quit: false, text: Some(String::new()), text_buffer: None, current_screen: None, load_screen: format!("introduction").into(), control_text:String::new()};
+    let mut app = App { should_quit: false, text: Some(String::new()), text_buffer: None, current_screen: None, load_screen: format!("introduction").into(), commands:None};
     // app.set_load_screen(format!("token_input"));
-    println!("{:?}", app);
+    // println!("{:?}", app);
     loop {
         tui.draw(|frame| ui(&app, frame))?;
         // print!("{:?}", app.text);
