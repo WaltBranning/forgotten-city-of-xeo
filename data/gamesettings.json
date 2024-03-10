@@ -121,9 +121,9 @@
         },
         {
           "command_type": "action",
-          "label": "",
+          "label": "Look For Any Signs Of Activity",
           "location": "",
-          "prompt": ""
+          "prompt": "Inspect the area surrounding the market to see if there looked like there were any person inhabiting the area.  The adventurer finds no clear sign of inhabitants but does notice that there was some old old teltale signs of people or something taking residence in the ruins of the market.  Perhaps the crystall bones are to scary."
         },
         {
           "command_type": "move",
@@ -153,14 +153,14 @@
         },
         {
           "command_type": "move",
-          "label": "",
-          "location": "",
+          "label": "Move Into The Gardens",
+          "location": "gardens",
           "prompt": ""
         },
         {
-          "command_type": "",
-          "label": "",
-          "location": "",
+          "command_type": "move",
+          "label": "Cut Back To The Avenue",
+          "location": "avenue_two",
           "prompt": ""
         }
       ]
@@ -178,16 +178,48 @@
           "prompt": "Examine the blockage of the street connecting the Market of Bone and the Avenue from the avenue side"
         },
         {
+          "command_type": "move",
+          "label": "Continue On The Avenue",
+          "location": "avenue_two",
+          "prompt": ""
+        },
+        {
+          "command_type": "action",
+          "label": "Examine The Pattern Of The Paving Stones",
+          "location": "",
+          "prompt": "Examine and describe the stones that make up the surface of the stone paved path.  On closer inspection you can make out the intricate patterns to how they are arranged and the choice of stone types and colors.  There are unique stones interspersed in the pattern that seem to be of the same crystalline material used for emphasis elsewhere in the city.  Remark how in the night it must produce a striking pattern of constalations along the path."
+        },
+        {
+          "command_type": "move",
+          "label": "You Are Drawn To A What Looks Like A Lab",
+          "location": "mech_lab",
+          "prompt": ""
+        }
+      ]
+    },
+    {
+      "id": "avenue_two",
+      "name": "Avenue of Guilty Gears",
+      "description": "",
+      "prompt": "",
+      "commands": [
+        {
           "command_type": "",
           "label": "",
           "location": "",
           "prompt": ""
         },
         {
-          "command_type": "",
-          "label": "",
-          "location": "",
+          "command_type": "move",
+          "label": "Investigate The Cemetery",
+          "location": "cemetery",
           "prompt": ""
+        },
+        {
+          "command_type": "action",
+          "label": "Examine The Pattern Of The Paving Stones",
+          "location": "",
+          "prompt": "Once again Examine and describe the stones that make up the surface of the stone paved path.  On closer inspection you can make out the intricate patterns to how they are arranged and the choice of stone types and colors.  There are unique stones interspersed in the pattern that seem to be of the same crystalline material used for emphasis elsewhere in the city.  Remark that there must be a signifigance to the pattern."
         },
         {
           "command_type": "",
