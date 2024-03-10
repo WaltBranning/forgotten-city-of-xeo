@@ -12,11 +12,18 @@ The answers lie waiting to be discovered in the forgotten city of Xeo. Are you b
 
 ![Screenshot](./Project_Metadata/screenshot.png)
 
+![Map of The Forgotten City Of Xeo](./Project_Metadata/Forgotten-City-Of-Xeo-Map.webp)
+
 ## Background
 
 Welcome to *The Forgotten City Of Xeo*, a text adventure game inspired by iconic games such as *Colossal Cave Adventure*. It introduces a unique twist to the classic gaming genre by harnessing the power of ChatGPT. The game began as a learning project when I began to learning the Rust programming language. I was wanting to play around a little with the ChatGPT API and the Ratatui terminal user interfaces looked pretty cool and the thought of AI narrating an adventure game seemed a pretty cool and fun project to learn Rust.
 
 The main highlight of this game is that each playthrough text is generated on-the-fly using OpenAI's GPT-3.5 model, offering a unique narrative every time you play. While the main storyline is on rails, the way you traverse the narrative landscape and experience the world will differ each time, all thanks to the dynamic text generation capability of ChatGPT.
+
+
+## Playing
+
+It is compiling clean with cargo run.  The only thing needed is to add your openAI API token to the gamesettings.json file in the data directory.
 
 
 ## Installation
