@@ -1,4 +1,5 @@
 use serde::{Deserialize, Serialize};
+use crate::app::*;
 use std::{
     collections::HashMap, env::current_dir, fs, path::Path
 };
@@ -24,24 +25,6 @@ impl GameSettings {
 }
 
 #[derive(Serialize, Deserialize, Debug)]
-pub struct AppData {
-     pub chat_config: ChatConfig,
-}
-
-impl AppData {
-    pub fn chat_config () -> ChatConfig {
-        // println!("Now Access chat_config");
-        let file = GameSettings::AppSettings.read("gamesettings");
-        file.app.chat_config
-    }
-}
-
-#[derive(Serialize, Deserialize, Debug)]
-pub struct ChatConfig {
-    pub token: String
-}
-
-#[derive(Serialize, Deserialize, Debug)]
 pub struct Settings {
     pub locations: Vec<Location>,
     pub world: WorldData,
@@ -57,13 +40,14 @@ pub struct WorldData {
     pub system: String,
 }
 
-#[derive(Serialize, Deserialize, Debug)]
+#[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct LocationCommand {
     pub command_type: String,
     pub label: String,
     pub location: String,
     pub prompt: String,
 }
+
 
 #[derive(Serialize, Deserialize, Debug)]
 pub struct Location {

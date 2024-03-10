@@ -6,16 +6,28 @@ use chat_gpt_lib_rs::{
     Role, 
     ChatResponse
 };
-use ratatui::symbols::bar::Set;
+use std::result::Result;
+use serde::{Deserialize, Serialize};
+use color_eyre::eyre::Error;
 
+use crate::game::*;
+use crate::app::*;
 // use serde::{Deserialize, Serialize};
 // use serde_json::{Result as JsonResult, Value};
 
-use crate::game::*;
+
 // use tokio;
-use color_eyre::eyre::Error;
+
+
+// pub type Err = Box<dyn std::error::Error>;
+
 
 const BASE_URL: &str = "https://api.openai.com";
+
+#[derive(Serialize, Deserialize, Debug)]
+pub struct ChatConfig {
+    pub token: String
+}
 
 pub async fn chat_interface(request: String, ) -> Result<ChatResponse, Error> {
     let token = AppData::chat_config().token;
@@ -30,6 +42,7 @@ pub async fn chat_interface(request: String, ) -> Result<ChatResponse, Error> {
     // println!("{:?}",location);
     let chat_input = ChatInput {
         model: Model::Gpt3_5Turbo,
+        // model: Model::Gpt_4Turbo,
         messages: vec![
             Message {
                 role: Role::System,

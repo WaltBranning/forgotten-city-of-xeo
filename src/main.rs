@@ -1,42 +1,15 @@
-use std::{
-    collections::VecDeque,
-    io::{self, 
-        stdout, 
-        Error}, 
-    task::Poll};
-// mod event;
-use crossterm::{
-    execute,
-    event::{
-        self,
-        Event,
-        KeyCode,
-        
-    }, 
-    terminal::{
-        disable_raw_mode, 
-        enable_raw_mode, 
-        EnterAlternateScreen, 
-        LeaveAlternateScreen
-    }
-};
-use game::{AppData, GameSettings};
-use ratatui::{backend::CrosstermBackend, Terminal};
+use ratatui::widgets::ListState;
 mod chatbuild;
-use crate::chatbuild::*;
 mod ui;
 mod tui;
 mod app;
 mod game;
 use crate::app::*;
 use crate::ui::ui;
-use crate::tui::*;
 
 #[tokio::main]
 async fn main() -> Result<()> {
-
     let result = run().await;
-
     Ok(())
 }
 
@@ -47,22 +20,33 @@ async fn run() -> Result<()> {
     
     tui.enter()?;
     // println!("Checking After Enter");
-    let mut app = App { should_quit: false, text: Some(String::new()), text_buffer: None, current_screen: None, load_screen: format!("introduction").into(), commands:None};
-    // app.set_load_screen(format!("token_input"));
+    let default_control_state = ControlState{ state:ListState::default(), commands:None, current_selected:None};
+
+    let mut app = App { 
+        should_quit: false, 
+        text: Some(String::new()), 
+        text_buffer: None, 
+        current_location: None, 
+        load_location: format!("introduction").into(), 
+        location_label: None,
+        commands:None,
+        control_state: default_control_state,
+    };
+    // app.set_load_location(format!("token_input"));
     // println!("{:?}", app);
     loop {
-        tui.draw(|frame| ui(&app, frame))?;
-        // print!("{:?}", app.text);
+        tui.draw(|frame| ui(app.clone(), frame))?;
+        
         if let Some(text) = app.text_buffer.as_mut()  {
             let new_val = text.pop_back();
             if new_val.is_some() {
-                let old_val = app.text.clone().unwrap();
-                let new_text = format!("{}{}",old_val,  &new_val.unwrap().to_string());
+                let old_val = app.text.clone().unwrap_or("".to_string());
+                let new_text = format!("{}{}",old_val,  &new_val.unwrap_or(' ').to_string());
                 app.text.replace(new_text);
             }
         }
         if let Some(event) = tui.next().await {
-            update(&mut app, event).await?;
+            app.update(event).await?;
         };
                 
         if app.should_quit {
