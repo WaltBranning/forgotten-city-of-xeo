@@ -1,0 +1,371 @@
+{
+  "app": {
+    "chat_config": {
+      "token": ""
+    }
+  },
+  "locations": [
+    {
+      "id": "start",
+      "name": "The Journey Begins",
+      "description": "A mad german scientist Herr Heinrich Grimmbach's fled into the remote jungles of the amazon Brazil and forged creations out of the unique qualities of the exotic plants that the ancient natives built their short lived empire upon until their corruption of the very flora and fauna turned the heart dark situated in the Abyssal Grotto.  Herr Heinrich Grimmbach's experiments merged the organic corrupted flora growing out of the Abyssal Grotto with mechanical, analog computers trying to create an AI.  In the process he created many fascinating and sometimes darkly beautiful inventions that in and of themselves were neither good nor evil but turned for ill intentions by their creator.  Their discovery could lead to great benefit in the right hands or great harm in the wrong.  The adventure must discover the history and truth alongside the full scope of the hope and danger and decide the fate of the secrets of The Forgotten City Of Xeo",
+      "prompt": "Greet the adventure and welcome him to the upcoming journey",
+      "commands": [
+        {
+          "command_type": "move",
+          "label": "Move into the gatehouse",
+          "location": "gatehouse",
+          "prompt": ""
+        },
+        {
+          "command_type": "action",
+          "label": "Examine the intricate carvings on the gate",
+          "location": "",
+          "prompt": "Examine the intricate carvings on the gate and the surounding area. Give a detailed description of a couple of them that reflect the history of the ancient inhabitants."
+        },
+        {
+          "command_type": "action",
+          "label": "Examine the area around the gates for any hidden clues or dangers.",
+          "location": "",
+          "prompt": "Examine the area around the gates for any hidden clues or dangers."
+        },
+        {
+          "command_type": "action",
+          "label": "Investigate the surrounding area for any hidden clues",
+          "location": "",
+          "prompt": "Investigate the surrounding area for any hidden clues, find some ancient crystal artifacts nestled into nooks around the gate like crystaline sentinels"
+        }
+      ]
+    },
+    {
+      "id": "introduction",
+      "name": "The Journey Begins",
+      "description": "Before the explore lays the gates to the Forgotten City Of Xeo.  They are forboding and stand as a testement to grand orgins of the cities ancient past.  The carved reliefs on the gate posts hint at the grusomeness customs of the original inhabitants and must in thier era must have made uncomfortable the travelers unaccustomed to the sight of them. The gateposts now hold the slowly decaying remnants of the gates themselves. Even in the current state it leaves the explorer with a sense of forboding.",
+      "prompt": "Describe world and history of The Forgotten City Of Xeo verbosely. At the end the explorer approaches the gates, describe details of gate.",
+      "commands": [
+        {
+          "command_type": "move",
+          "label": "Move into the gatehouse",
+          "location": "gatehouse",
+          "prompt": ""
+        },
+        {
+          "command_type": "action",
+          "label": "Examine the intricate carvings on the gate",
+          "location": "",
+          "prompt": "Examine the intricate carvings on the gate and the surounding area. Give a detailed description of a couple of them that reflect the history of the ancient inhabitants."
+        },
+        {
+          "command_type": "action",
+          "label": "Examine the area around the gates for any hidden clues or dangers.",
+          "location": "",
+          "prompt": "Examine the area around the gates for any hidden clues or dangers."
+        },
+        {
+          "command_type": "action",
+          "label": "Investigate the surrounding area for any hidden clues",
+          "location": "",
+          "prompt": "Investigate the surrounding area for any hidden clues, find some ancient crystal artifacts nestled into nooks around the gate like crystaline sentinels"
+        }
+      ]
+    },
+    {
+      "id": "gatehouse",
+      "name": "The Gatehouse",
+      "description": "It rises like an insolent challenge to the verdant wilderness around it, promising a gateway to a world long lost and secrets buried in time. Its unyielding walls demonstrate human deftness, each brick stacked with precision despite the wear and tear of ages. The facades of the gatehouse are adorned with intricate reliefs, inscriptions and pictographs, etched deeply into the walls. Spiralling designs frame the ominous entryway and stretch upwards with a sense of determined ambition. Every inch of the edifice is covered, no doubt with stories and tales of the ancient tribe that once thrived here. Among the repeating patterns, you notice certain images making an appearance more often than others: a gilded sun, a twisted serpent, a hand reaching for a star, and strange plant-life which seems to have a menacing undertone",
+      "prompt": "Describe the Gatehouse as the adventure aproaches it. It is forboding and covered in jungle vines and carved relief from the ancient tribe that build the city. Be verbose and build upon how it fits into the history of The Forgotten City Of Xeo.",
+      "commands": [
+        {
+          "command_type": "action",
+          "label": "Examine the avenue ahead of you",
+          "location": "",
+          "prompt": "Peer down the avenue of Guilty Gears."
+        },
+        {
+          "command_type": "move",
+          "label": "Travel along the avenue in front of you.",
+          "location": "avenue_one",
+          "prompt": ""
+        },
+        {
+          "command_type": "move",
+          "label": "Move to the building on the right where there are different bits of mechanical contruct poking through the green overgrowth.",
+          "location": "mech_lab",
+          "prompt": ""
+        },
+        {
+          "command_type": "move",
+          "label": "Veer to the left in what appears to be an ancient market area.",
+          "location": "market",
+          "prompt": ""
+        }
+      ]
+    },
+    {
+      "id": "market",
+      "name": "Market Of Bones",
+      "description": "What once bubbled with trade and commerce, with laughter and gossip, the banter of haggling, now stood a monument of crystalline bones. They sparkle hauntingly in the dappled sunlight, casting prismatic hues across the cobblestones. Each skeletal piece has been glazed by time and the peculiar minerals contained within the soil, turning them into dazzling crystals. Each bone emanates an otherworldly glow, casting an ethereal light about the silent market space. Rows upon rows of vendor stalls lie abandoned, their skeletal frameworks too, enclosed in the same crystalline architecture. Shop counters that once displayed textiles, pottery, and trinkets now bear only a sequined carpet of gleaming skeletal remains. A stillness hangs heavy in the air here, though the whispering wind through the crystalline structures creates an eerie symphony. Despite the eeriness, there's a certain terrible beauty to this haunted place. The remnants of the lost civilization loom as spectral monuments, whispering ancient lore. In this otherworldly display",
+      "prompt": "After passing through the city's formidable gatehouse, you find yourself standing in what must have once been a bustling market, but is now an eerie tableau of silence and haunting beauty - The Market of Bones - give a description for the Market of Bones where crystalline bones decorate the area. ",
+      "commands": [
+        {
+          "command_type": "action",
+          "label": "Closely Inspect The Bones",
+          "location": "",
+          "prompt": "The adventurer picks up a crystal skull and peers deep into its eye sockets and gives a small shiver thinking about how any visting foreign merchants would have been too intimidated to be dishonest."
+        },
+        {
+          "command_type": "action",
+          "label": "Examine Blocked Road",
+          "location": "",
+          "prompt": "Examine the blockage of the street connecting the Market of Bone and the Avenue from the market side"
+        },
+        {
+          "command_type": "action",
+          "label": "",
+          "location": "",
+          "prompt": ""
+        },
+        {
+          "command_type": "move",
+          "label": "Move Into The Cemetery Ahead",
+          "location": "cemetery",
+          "prompt": ""
+        }
+      ]
+    },
+    {
+      "id": "cemetery",
+      "name": "Cemetery Of Stars",
+      "description": "There is an ethereal elegance to this place. Each night these luminescent pillars transform this solemn space into a dazzling constellation, hence its name. The sight of this star-like graveyard under the darkness of a moonlit sky is both haunting and breathtaking. The glow illuminates the complex hieroglyphs etched into each monument, undecipherable but beautiful in their mystery.The Cemetery of Stars is a perfectly paradoxical realization of death and beauty intertwined. Each carved tablet tells a complex history of an individual's life and death, in stories transcribed in ancient alien tongues that glow under the shimmering night canopy.",
+      "prompt": "Describe the Cemetery of Stars - the crystalline material that the bones of the market of bones make up the tombs and steles in cemetery that must have been reserved for the royalty and honored among the ancient inhabitants.  Many of the steles have intricate carvings with some sort of glowing inlay that creates a beautiful but haunting sea of stars in the dim light of the canpoy",
+      "commands": [
+        {
+          "command_type": "action",
+          "label": "Examine The Crystalline Steles Closely",
+          "location": "",
+          "prompt": "Examine the crystalline steles closely: Take a step closer to one of the towering steles. Run your hand over the cold crystal surface. Trace the story carved into its structure, your fingers dancing over the strange symbols. The hieroglyphic markings, despite their cryptic nature, might offer clues to the past inhabitants and their way of life. Decribe in detail"
+        },
+        {
+          "command_type": "action",
+          "label": "Study The Visible Patterns",
+          "location": "",
+          "prompt": "Study the visible patterns: Take a step back and look for patterns in the arrangement of the gravestones, the markings on them, or the way they catch and scatter the light. The steles may be positioned to astral affairs or cultural significance. Report in how the stars of create a consolation pointing to the grotto"
+        },
+        {
+          "command_type": "move",
+          "label": "",
+          "location": "",
+          "prompt": ""
+        },
+        {
+          "command_type": "",
+          "label": "",
+          "location": "",
+          "prompt": ""
+        }
+      ]
+    },
+    {
+      "id": "avenue_one",
+      "name": "Avenue of Guilty Gears",
+      "description": "",
+      "prompt": "",
+      "commands": [
+        {
+          "command_type": "action",
+          "label": "Examine Blocked Road",
+          "location": "",
+          "prompt": "Examine the blockage of the street connecting the Market of Bone and the Avenue from the avenue side"
+        },
+        {
+          "command_type": "",
+          "label": "",
+          "location": "",
+          "prompt": ""
+        },
+        {
+          "command_type": "",
+          "label": "",
+          "location": "",
+          "prompt": ""
+        },
+        {
+          "command_type": "",
+          "label": "",
+          "location": "",
+          "prompt": ""
+        }
+      ]
+    },
+    {
+      "id": "mech_lab",
+      "name": "Laboratory Of Mechanical Minds",
+      "description": "",
+      "prompt": "",
+      "commands": [
+        {
+          "command_type": "",
+          "label": "",
+          "location": "",
+          "prompt": ""
+        },
+        {
+          "command_type": "",
+          "label": "",
+          "location": "",
+          "prompt": ""
+        },
+        {
+          "command_type": "",
+          "label": "",
+          "location": "",
+          "prompt": ""
+        },
+        {
+          "command_type": "",
+          "label": "",
+          "location": "",
+          "prompt": ""
+        }
+      ]
+    },
+    {
+      "id": "echo_chamber",
+      "name": "The Chamber of Echoes",
+      "description": "A vast cavern filled with strange, glowing crystals that emit an eerie light. The slightest sound reverberates off the walls, creating a haunting symphony of echoes. Within this chamber, the past seems to linger, trapped within the very stones of Xeo.",
+      "prompt": "",
+      "commands": [
+        {
+          "command_type": "",
+          "label": "",
+          "location": "",
+          "prompt": ""
+        },
+        {
+          "command_type": "",
+          "label": "",
+          "location": "",
+          "prompt": ""
+        },
+        {
+          "command_type": "",
+          "label": "",
+          "location": "",
+          "prompt": ""
+        },
+        {
+          "command_type": "",
+          "label": "",
+          "location": "",
+          "prompt": ""
+        }
+      ]
+    },
+    {
+      "id": "gardens",
+      "name": "The Verdigris Gardens",
+      "description": "Nestled between the and over spilling into the Laboratory Of Mechanical Minds and The Cemetery lies a hidden garden unlike any other. Here, exotic plants with intricate foliage shimmer with hues of gold, silver, and copper verdigris. Each leaf and petal seems to be crafted from precious metals, casting a mesmerizing glow in the dim light of Xeo. The air is filled with the faint scent of ancient machine mixed with the organic, and the soft rustle of leaves whispers of secrets waiting to be uncovered.",
+      "prompt": "",
+      "commands": [
+        {
+          "command_type": "",
+          "label": "",
+          "location": "",
+          "prompt": ""
+        },
+        {
+          "command_type": "",
+          "label": "",
+          "location": "",
+          "prompt": ""
+        },
+        {
+          "command_type": "",
+          "label": "",
+          "location": "",
+          "prompt": ""
+        },
+        {
+          "command_type": "",
+          "label": "",
+          "location": "",
+          "prompt": ""
+        }
+      ]
+    },
+    {
+      "id": "tower",
+      "name": "The Tower of Insight",
+      "description": "A towering spire that pierces the jungle canopy, its top lost in the tree tops. Within its walls are chambers filled with mystical artifacts and arcane knowledge. Those who seek enlightenment may find answers here.",
+      "prompt": "",
+      "commands": [
+        {
+          "command_type": "",
+          "label": "",
+          "location": "",
+          "prompt": ""
+        },
+        {
+          "command_type": "",
+          "label": "",
+          "location": "",
+          "prompt": ""
+        },
+        {
+          "command_type": "",
+          "label": "",
+          "location": "",
+          "prompt": ""
+        },
+        {
+          "command_type": "",
+          "label": "",
+          "location": "",
+          "prompt": ""
+        }
+      ]
+    },
+    {
+      "id": "grotto",
+      "name": "The Abyssal Grotto",
+      "description": "",
+      "prompt": "",
+      "commands": [
+        {
+          "command_type": "",
+          "label": "",
+          "location": "",
+          "prompt": ""
+        },
+        {
+          "command_type": "",
+          "label": "",
+          "location": "",
+          "prompt": ""
+        },
+        {
+          "command_type": "",
+          "label": "",
+          "location": "",
+          "prompt": ""
+        },
+        {
+          "command_type": "",
+          "label": "",
+          "location": "",
+          "prompt": ""
+        }
+      ]
+    }
+  ],
+  "world": {
+    "speaker_role": "You are dungeon master narrating the text adventure The Forgotten City Of Xeo. You provide a robust and interesting journey with a feel of Indiana Jones, National Treasure, and especially take inspiration from the styles of James Rollins sigma force novels, narrative like Stephen King, and world building like H. P. Lovecraft or Edgar Allen Poe",
+
+    "introduction": "Deep within the dense jungle of the Amazon, shrouded in mist and mystery, lies the ancient and forgotten city of Xeo. Lost to the passage of time, Xeo holds untold the mysteries that you have spent years pursuing.<br>As you finally stand at the edge of the jungle, the dense canopy above casts the world below in shadow. The air is thick with humidity, and the sounds of wildlife echo through the trees. Yet amidst the vibrant greenery, a sense of foreboding hangs heavy in the air, hinting at the secrets that lie hidden within the heart of Xeo.<br>Your journey into the depths of the jungle begins here, where every step brings you closer to the enigmatic city's embrace. With each stride, you push through the tangled undergrowth, forging a path into the unknown. The journey ahead is fraught with danger, but also promises adventure and discovery beyond your wildest dreams.<br>As you venture deeper into the jungle, the ruins of a forgotten civilization begin to emerge from the foliage. Crumbling stone structures peek through the vines, their weathered surfaces bearing silent witness to the passage of centuries. And amidst the ruins, the whispers of Xeo beckon you closer, urging you to uncover its secrets and unlock its hidden treasures.<br>But beware, for you are not alone in your quest. Ancient guardians and fearsome creatures lurk in the shadows, ready to defend Xeo's secrets from intruders. And darker forces still may be at play, hidden in the depths of the jungle's tangled embrace.<br>Your fate and the fate of Xeo itself hang in the balance as you embark on this perilous journey into the heart of the Amazon. Will you uncover the truth behind the city's downfall, or will you become just another lost soul, swallowed by the jungle's depths?<br>The answers lie waiting to be discovered in the forgotten city of Xeo. Are you brave enough to unlock its mysteries and claim its treasures as your own?",
+
+    "description": "A mad german scientist Herr Heinrich Grimmbach's fled into the remote jungles of the amazon Brazil and forged creations out of the unique qualities of the exotic plants that the ancient natives built their short lived empire upon until their corruption of the very flora and fauna turned the heart dark situated in the Abyssal Grotto.  Herr Heinrich Grimmbach's experiments merged the organic corrupted flora growing out of the Abyssal Grotto with mechanical, analog computers trying to create an AI.  In the process he created many fascinating and sometimes darkly beautiful inventions that in and of themselves were neither good nor evil but turned for ill intentions by their creator.  Their discovery could lead to great benefit in the right hands or great harm in the wrong.  The adventure must discover the history and truth alongside the full scope of the hope and danger and decide the fate of the secrets of The Forgotten City Of Xeo",
+
+    "history": "In the shadowy depths of the Amazon rainforest, where the trees whisper secrets and the earth breathes ancient tales, there once thrived a civilization shrouded in mystery and darkness. It was a civilization born of ambition and fueled by the power of the jungle itself, a place where the line between reality and nightmare blurred like mist among the trees.<br><br>The ancient city of Xeo, as it came to be known, rose from the fertile soil of the rainforest like a twisted vine, its roots sinking deep into the earth as its towers reached for the heavens above. For a brief, fleeting moment, Xeo stood as a beacon of civilization in the heart of the jungle, its people harnessing the untamed power of the wilderness to fuel their ambitions.<br><br>But as with all things born of hubris and folly, the seeds of Xeo's destruction were sown deep within its very foundation. The inhabitants of the city, drunk on power and blinded by their own arrogance, sought to bend the jungle to their will, heedless of the consequences.<br><br>Their tampering with the natural order unleashed a darkness that seeped into the very soul of Xeo, corrupting its people and twisting its once vibrant streets into shadowy alleys haunted by whispers of despair. The lush greenery that had once sustained them now turned against them, its tendrils wrapping tight around their throats as if to choke the life from their once-proud civilization.<br><br>In the end, Xeo fell not with a roar, but with a whispered lament, its towers crumbling into ruin as the jungle reclaimed what was rightfully its own. And so, the ancient civilization of Xeo vanished into the mists of time, its name whispered in hushed tones by those who dared to tread where the shadows dwell.<br><br>But beware, for the echoes of Xeo's folly still linger among the trees, a warning to those who would seek to challenge the power of the jungle itself. For in the heart of the Amazon, where the light of civilization fades and the darkness reigns supreme, the sins of the past are never truly forgotten.<br><br>In the heart of the dense Amazon rainforest, where the air hangs heavy with the scent of decay and the earth swallows secrets whole, the story of Xeo didn't end but grew as twisted as the gnarled roots that snake through the undergrowth. The tale twisting to madness and obsession, of a man who dared to plumb the depths of the jungle's darkest mysteries and unleash horrors beyond imagining.<br><br>His name was whispered in fearful tones by those who dared to speak of him at all: Herr Heinrich Grimmbach, a mad scientist driven by a thirst for knowledge that bordered on madness. With eyes as cold and calculating as the machines he tinkered with, Grimmbach fled from the civilized world into the heart of the wilderness, seeking refuge amidst the tangled vines and hidden caves of the Amazon seeking the long lost and barely remembered city of Xeo.<br><br>It was here, in the remote depths of the rainforest, that Grimmbach's descent into madness reached its zenith. In the ruins of the ancient city of Xeo, he found the perfect canvas for his twisted experiments, a place where the boundaries between science and obsession blurred like the mists that shrouded the jungle at dawn.<br><br>Driven by a mad ambition to unlock the secrets of the Abyssal Grotto, Grimmbach delved deep into its shadowy depths, his mind aflame with visions of reclaiming power, imagining a fourth reich shaped in his image. There, amidst the corrupted flora that thrived in the darkness, he forged his creations: abominations of flesh and metal, born of twisted science and ancient corruption.<br><br>But as Grimmbach's experiments grew ever more ambitious, so too did the darkness that lurked within him. Haunted by visions of a future he could not control, he became consumed by a madness that knew no bounds, his every thought twisted by the whispers of the jungle itself. Till his own darkness and the jungle consumed him.<br><br>And so it was that Grimmbach's legacy became etched in blood and shadow, his creations created by a twisted dark mind waiting hauntingly beautiful in the ruins of Xeo for the sins of their creator. For in the heart of the Amazon, where the jungle's grip is strongest and the line between reality and nightmare fades to nothing, there lies the choices of fate of The Forgotten City Of Xeo - Will Xeo fade once again into barely whispered legends or will the wonders of Xeo's purpose be unleashed upon the world or repurposed for the benefit of mankind.  Will you be the one to decide, enter, learn, and decide adventurer!",
+    "system": "Do not include the options in the response.  The command option are provided by the script"
+  }
+}
