@@ -12,15 +12,6 @@ use color_eyre::eyre::Error;
 
 use crate::game::*;
 use crate::app::*;
-// use serde::{Deserialize, Serialize};
-// use serde_json::{Result as JsonResult, Value};
-
-
-// use tokio;
-
-
-// pub type Err = Box<dyn std::error::Error>;
-
 
 const BASE_URL: &str = "https://api.openai.com";
 
@@ -33,7 +24,7 @@ pub async fn chat_interface(request: String, ) -> Result<ChatResponse, Error> {
     let token = AppData::chat_config().token;
     let client:ChatGPTClient = ChatGPTClient::new(&token, BASE_URL);
     let role_description = Settings::world_data().speaker_role;
-    let introducton = Settings::world_data().introduction;
+    // let introducton = Settings::world_data().introduction;
     let description = Settings::world_data().description;
     let history = Settings::world_data().description;
     let system = Settings::world_data().system;

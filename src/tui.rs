@@ -25,9 +25,9 @@ use std::{
   #[derive(Clone, Debug)]
   pub enum Event {
     Init,
-    Quit,
+    // Quit,
     Error,
-    Closed,
+    // Closed,
     Tick,
     Render,
     FocusGained,
@@ -73,15 +73,15 @@ use std::{
       self
     }
   
-    pub fn mouse(mut self, mouse: bool) -> Self {
-      self.mouse = mouse;
-      self
-    }
+    // pub fn mouse(mut self, mouse: bool) -> Self {
+    //   self.mouse = mouse;
+    //   self
+    // }
   
-    pub fn paste(mut self, paste: bool) -> Self {
-      self.paste = paste;
-      self
-    }
+    // pub fn paste(mut self, paste: bool) -> Self {
+    //   self.paste = paste;
+    //   self
+    // }
   
     pub fn start(&mut self) {
       let tick_delay = std::time::Duration::from_secs_f64(1.0 / self.tick_rate);
@@ -198,17 +198,17 @@ use std::{
       self.cancellation_token.cancel();
     }
   
-    pub fn suspend(&mut self) -> Result<()> {
-      self.exit()?;
-      #[cfg(not(windows))]
-    //   signal_hook::low_level::raise(signal_hook::consts::signal::SIGTSTP)?;
-      Ok(())
-    }
+    // pub fn suspend(&mut self) -> Result<()> {
+    //   self.exit()?;
+    //   #[cfg(not(windows))]
+    // //   signal_hook::low_level::raise(signal_hook::consts::signal::SIGTSTP)?;
+    //   Ok(())
+    // }
   
-    pub fn resume(&mut self) -> Result<()> {
-      self.enter()?;
-      Ok(())
-    }
+    // pub fn resume(&mut self) -> Result<()> {
+    //   self.enter()?;
+    //   Ok(())
+    // }
   
     pub async fn next(&mut self) -> Option<Event> {
       self.event_rx.recv().await
