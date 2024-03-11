@@ -25,8 +25,9 @@ It is very simple game and the the main highlight of this game is that each play
 
 
 ## Playing
-!! Note there is a small delay because of the call to ChatGPT API. !!
-It is compiling clean with cargo run.  Or there are some binaries in build that may or may not work. The only thing needed is to add your openAI API token to the gamesettings.json file in the data directory under the field token and select the gpt model you want to use if different than the default Gpt3_5Turbo.
+**!! Note there is a small delay because of the call to ChatGPT API. !!**
+To install just to play you can clone and build with cargo or download the binary builds in the build directory and run them on your machine as excutable.
+Then only thing needed is to add your openAI API token to the gamesettings.json file in the data directory under the field token and select the gpt model you want to use if different than the default Gpt3_5Turbo.
 
 
 Have tested: 
