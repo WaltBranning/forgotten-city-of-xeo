@@ -1,3 +1,7 @@
 /target
 token
 .vscode
+.fingerprint
+build
+deps
+.cargo-lock
