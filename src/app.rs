@@ -26,7 +26,6 @@ impl App {
         let mut text = String::new();
     
         if let Some(location) = Settings::location_data(location_name) {
-            
             let prompt = location.prompt.to_string();
             let details = location.description.to_string();
             let text_data = chat_interface(vec![prompt,details].join(" ")).await;

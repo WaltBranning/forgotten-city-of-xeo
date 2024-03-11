@@ -1,0 +1,10 @@
+/media/walter/Projects/Rust/forgotten-city-of-xeo/forgotten-city-of-xeo/builds/LINUX/release/deps/libchat_gpt_lib_rs-394ea3edd765207d.rmeta: /home/walter/.cargo/registry/src/index.crates.io-6f17d22bba15001f/chat-gpt-lib-rs-0.3.3/src/lib.rs /home/walter/.cargo/registry/src/index.crates.io-6f17d22bba15001f/chat-gpt-lib-rs-0.3.3/src/client.rs /home/walter/.cargo/registry/src/index.crates.io-6f17d22bba15001f/chat-gpt-lib-rs-0.3.3/src/models.rs /home/walter/.cargo/registry/src/index.crates.io-6f17d22bba15001f/chat-gpt-lib-rs-0.3.3/src/tokenizer.rs
+
+/media/walter/Projects/Rust/forgotten-city-of-xeo/forgotten-city-of-xeo/builds/LINUX/release/deps/libchat_gpt_lib_rs-394ea3edd765207d.rlib: /home/walter/.cargo/registry/src/index.crates.io-6f17d22bba15001f/chat-gpt-lib-rs-0.3.3/src/lib.rs /home/walter/.cargo/registry/src/index.crates.io-6f17d22bba15001f/chat-gpt-lib-rs-0.3.3/src/client.rs /home/walter/.cargo/registry/src/index.crates.io-6f17d22bba15001f/chat-gpt-lib-rs-0.3.3/src/models.rs /home/walter/.cargo/registry/src/index.crates.io-6f17d22bba15001f/chat-gpt-lib-rs-0.3.3/src/tokenizer.rs
+
+/media/walter/Projects/Rust/forgotten-city-of-xeo/forgotten-city-of-xeo/builds/LINUX/release/deps/chat_gpt_lib_rs-394ea3edd765207d.d: /home/walter/.cargo/registry/src/index.crates.io-6f17d22bba15001f/chat-gpt-lib-rs-0.3.3/src/lib.rs /home/walter/.cargo/registry/src/index.crates.io-6f17d22bba15001f/chat-gpt-lib-rs-0.3.3/src/client.rs /home/walter/.cargo/registry/src/index.crates.io-6f17d22bba15001f/chat-gpt-lib-rs-0.3.3/src/models.rs /home/walter/.cargo/registry/src/index.crates.io-6f17d22bba15001f/chat-gpt-lib-rs-0.3.3/src/tokenizer.rs
+
+/home/walter/.cargo/registry/src/index.crates.io-6f17d22bba15001f/chat-gpt-lib-rs-0.3.3/src/lib.rs:
+/home/walter/.cargo/registry/src/index.crates.io-6f17d22bba15001f/chat-gpt-lib-rs-0.3.3/src/client.rs:
+/home/walter/.cargo/registry/src/index.crates.io-6f17d22bba15001f/chat-gpt-lib-rs-0.3.3/src/models.rs:
+/home/walter/.cargo/registry/src/index.crates.io-6f17d22bba15001f/chat-gpt-lib-rs-0.3.3/src/tokenizer.rs:

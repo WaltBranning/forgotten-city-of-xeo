@@ -1,0 +1,10 @@
+/media/walter/Projects/Rust/forgotten-city-of-xeo/forgotten-city-of-xeo/builds/LINUX/release/deps/libtracing_error-f3b2c528a877c1e7.rmeta: /home/walter/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tracing-error-0.2.0/src/lib.rs /home/walter/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tracing-error-0.2.0/src/backtrace.rs /home/walter/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tracing-error-0.2.0/src/error.rs /home/walter/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tracing-error-0.2.0/src/layer.rs
+
+/media/walter/Projects/Rust/forgotten-city-of-xeo/forgotten-city-of-xeo/builds/LINUX/release/deps/libtracing_error-f3b2c528a877c1e7.rlib: /home/walter/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tracing-error-0.2.0/src/lib.rs /home/walter/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tracing-error-0.2.0/src/backtrace.rs /home/walter/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tracing-error-0.2.0/src/error.rs /home/walter/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tracing-error-0.2.0/src/layer.rs
+
+/media/walter/Projects/Rust/forgotten-city-of-xeo/forgotten-city-of-xeo/builds/LINUX/release/deps/tracing_error-f3b2c528a877c1e7.d: /home/walter/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tracing-error-0.2.0/src/lib.rs /home/walter/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tracing-error-0.2.0/src/backtrace.rs /home/walter/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tracing-error-0.2.0/src/error.rs /home/walter/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tracing-error-0.2.0/src/layer.rs
+
+/home/walter/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tracing-error-0.2.0/src/lib.rs:
+/home/walter/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tracing-error-0.2.0/src/backtrace.rs:
+/home/walter/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tracing-error-0.2.0/src/error.rs:
+/home/walter/.cargo/registry/src/index.crates.io-6f17d22bba15001f/tracing-error-0.2.0/src/layer.rs:
