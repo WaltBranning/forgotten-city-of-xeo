@@ -30,9 +30,9 @@ It is compiling clean with cargo run.  Or there are some binaries in build that 
 
 
 Have tested: 
-    * Gpt3_5Turbo
-    * Gpt_4
-    * Gpt_4Turbo
+* Gpt3_5Turbo
+* Gpt_4
+* Gpt_4Turbo
 
 The quality of output for the Gpt 4 models is very good but does tend to overfow the current text area (and does eat some tokens, quickly). This is on the backlog to fix scrolling.  
 
