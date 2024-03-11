@@ -10,7 +10,10 @@ Your fate and the fate of Xeo itself hang in the balance as you embark on this p
 
 The answers lie waiting to be discovered in the forgotten city of Xeo. Are you brave enough to unlock its mysteries and claim its treasures as your own?
 
-![Screenshot](./Project_Metadata/screenshot.png)
+![Screenshot](./Project_Metadata/gpt4_loadscreen.png)
+
+
+## Current Map Of The Forgotten City Of Xeo
 
 ![Map of The Forgotten City Of Xeo](./Project_Metadata/Forgotten-City-Of-Xeo-Map.webp)
 
