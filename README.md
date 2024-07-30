@@ -51,6 +51,7 @@ The app configuration part of the gamesettings.json should look like something l
 
 A special thanks for the people working on Ratatui, making terminals looks awesome!
 A special thanks to OpenAI for their technology that powers the soul of this game!
+A especially special thanks to the team that continues to make Rust great!
 
 ## Contributing 
 
